@@ -23,6 +23,7 @@ export default {
     const users = await strapi.db
       .query('plugin::users-permissions.user')
       .findMany({})
+      console.log(users)
 
     const purchaseOrders = protheusOrders.map((protheusOrder) => {
       let mergedOrders = protheusOrder
@@ -33,7 +34,7 @@ export default {
       )
 
       const userFinded = users.find(
-        (user) => user.protheus_code === protheusOrder.buyer
+        (user) => user.protheusCode === protheusOrder.buyer
       )
 
       if (userFinded) {
