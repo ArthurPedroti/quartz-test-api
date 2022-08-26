@@ -1,11 +1,11 @@
 module.exports = {
   apps : [{
     name: 'quartz-test-api',
-    script: 'yarn start',
+    script: 'server.js',
     env: {
       NODE_ENV: "production",
-    }
-    // instances : "1",
-    // exec_mode : "cluster"
+    },
+    instances : "5",
+    exec_mode : "cluster"
   }]
 };

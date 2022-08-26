@@ -51,4 +51,4 @@ jobs:
         script: |
           cd ~/app/quartz-test-api
           yarn
-          pm2 restart quartz-test-api
+          pm2 reload quartz-test-api
